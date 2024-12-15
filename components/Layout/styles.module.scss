@@ -1,0 +1,12 @@
+.layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Высота на весь экран */
+    background-color: #313131; /* Цвет фона */
+    color: #f0f0f0; /* Цвет текста */
+}
+
+.content {
+    flex: 1; /* Занимает доступное пространство */
+    padding: 20px; /* Внутренние отступы */
+}
