@@ -1,8 +1,28 @@
 .footer {
-    background-color: #2d2d2d; /* Тот же цвет, что и хедер */
-    color: #f0f0f0; /* Цвет текста */
-    padding: 15px 0; /* Внутренние отступы сверху и снизу */
-    text-align: center; /* Центрирование текста */
-    border-top: 2px solid #ffffff; /* Белая полоска сверху */
-    font-size: 1rem; /* Размер шрифта */
-}
+    background-color: #1a1a1a; // В тон остальному фону
+    color: #ccc;
+    padding: 20px 0;
+    text-align: center;
+    border-top: 2px solid #333;
+    font-size: 1rem;
+    font-family: sans-serif;
+  
+    // Если используешь ссылку в футере
+    a {
+      color: #8ae234;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+  
+      &:hover {
+        color: #b6f989;
+      }
+    }
+  
+    // Мелкий текст типа "© 2025"
+    .copyright {
+      margin-top: 8px;
+      font-size: 0.9rem;
+      color: #777;
+    }
+  }

@@ -1,37 +1,159 @@
 .header {
-    background-color: #2d2d2d; /* Еще темнее фон хедера */
-    color: #f0f0f0; /* Цвет текста */
-    padding: 15px 0; /* Увеличенный отступ сверху и снизу */
-    border-bottom: 2px solid #ffffff; /* Белая полоска снизу */
-    text-align: center; /* Центрируем текст и ссылки */
-    width: 100%; /* Ширина на всю страницу */
+  background-color: #1a1a1a;
+  color: #eee;
+  padding: 24px 0;
+  border-bottom: 2px solid #333;
+  width: 100%;
+  position: relative;
+  padding-top: 50px;
 
-    h1 {
-        font-size: 2.2rem; /* Увеличенный размер текста */
-        margin: 0; /* Убираем внешние отступы */
-        background-color: transparent; /* Для предотвращения перекрытия */
-        padding-bottom: 30px;
-    }
+  h1 {
+    font-size: 2.4rem;
+    margin: 0 0 12px;
+    color: #8ae234;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 200px; // под authControls
 }
 
-/* Стили для списка навигации */
 .navList {
-    list-style: none; /* Убираем маркеры списка */
-    display: flex; /* Flex-контейнер для горизонтального размещения */
-    justify-content: center; /* Центрируем элементы по горизонтали */
-    gap: 30px; /* Увеличенный отступ между ссылками */
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+
+  a {
+    text-decoration: none;
+    color: #eee;
+    font-size: 1.1rem;
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s ease;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      height: 2px;
+      width: 0;
+      background-color: #8ae234;
+      transition: width 0.3s ease;
+    }
+
+    &:hover {
+      color: #8ae234;
+
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.authControls {
+  position: absolute;
+  top: 24px;
+  right: 30px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.loginButton,
+.registerButton,
+.logoutButton {
+  background-color: #8ae234;
+  border: none;
+  color: #1a1a1a;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.loginButton:hover,
+.registerButton:hover,
+.logoutButton:hover {
+  background-color: #76c924;
+}
+
+.nickname {
+  color: #eee;
+  font-weight: bold;
+  margin-right: 6px;
+}
+
+.home{
+  padding-right: 50px;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px;
+  }
+
+  .navList {
+    display: none;
+    flex-direction: column;
+    gap: 14px;
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-top: 1px solid #333;
+    width: 100%;
 
     a {
-        text-decoration: none; /* Убираем подчеркивание ссылок */
-        color: #f0f0f0; /* Цвет ссылок */
-        font-weight: bold; /* Жирный текст */
-        font-size: 1.1rem; /* Увеличенный размер текста */
-        transition: color 0.3s ease;
-
-        &:hover {
-            color: #cfcfcf; /* Цвет при наведении */
-        }
+      font-size: 1.2rem;
     }
+  }
+
+  .navList.open {
+    display: flex;
+  }
+
+  .burger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1100;
+
+    div {
+      width: 25px;
+      height: 3px;
+      background-color: #8ae234;
+      border-radius: 2px;
+    }
+  }
+
+  .authControls {
+    position: static;
+    margin-top: 16px;
+    align-self: flex-end;
+  }
+
+  .nickname {
+    display: none;
+  }
+
+  .home {
+    padding-right: 0;
+    text-align: center;
+    width: 100%;
+  }
 }

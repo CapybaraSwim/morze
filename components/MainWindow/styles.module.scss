@@ -1,0 +1,74 @@
+.guideContainer {
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+    padding: 32px;
+    border-radius: 12px;
+    max-width: 900px;
+    margin: 40px auto;
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.7;
+    font-size: 1.15rem;
+  
+    h1, h2, h3 {
+      color: #8ae234;
+      margin-bottom: 18px;
+      font-weight: bold;
+      line-height: 1.4;
+    }
+  
+    h1 {
+      font-size: 1.8rem;
+      margin-top: 0;
+    }
+  
+    h2 {
+      font-size: 1.5rem;
+      margin-top: 28px;
+    }
+  
+    p {
+      margin-bottom: 20px;
+    }
+  
+    ul {
+      padding-left: 22px;
+      margin-bottom: 20px;
+  
+      li {
+        margin-bottom: 10px;
+      }
+    }
+  
+    ol {
+      padding-left: 24px;
+      margin-bottom: 24px;
+  
+      li {
+        margin-bottom: 12px;
+      }
+    }
+  
+    strong {
+      color: #ffffff;
+    }
+  
+    .finalNote {
+      margin-top: 32px;
+      font-weight: bold;
+      font-size: 1.2rem;
+      color: #8ae234;
+      text-align: center;
+    }
+    .imageWrapper {
+      margin-top: 40px;
+      text-align: center;
+    
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 12px;
+        box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
+  
